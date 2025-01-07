@@ -118,9 +118,9 @@ Secara umum, kondisi data sudah bersih dari data duplikat, walau jika dieksplora
 
 Pada dataset *olist_order_customers_dataset.csv* (selanjutnya akan ditulis dataset customer) memiliki kolom kode pos, kota, dan negara bagian dari konsumen. Namun pada proyek ini, hanya akan digunakan informasi kota konsumen saja. Sehingga datset customer ini tersisa 3 kolom, yaitu *customer_id*, *customer_unique_id*, dan *customer_city*. Terdapat 96096 pelanggan unik yang tersebar di 4119 kota.
 
-![image](https://github.com/muhafidz-ahmad/ecommerce-product-recommender-system/assets/115754250/0f667060-5439-412a-862c-a2a05d02cbd0)
+![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/pembeli.png?raw=true)
 
-Gambar 2. Top 10 kota dengan pembeli terbanyak
+Gambar 1. Top 10 kota dengan pembeli terbanyak
 
 Kemudian pada dataset *olist_order_items_dataset.csv* (selanjutnya akan ditulis dataset order item) memiliki total 6 kolom, dengan jumlah nilai unik sebagai berikut:
 * *order_id* : 98666 nilai unik
@@ -135,6 +135,7 @@ Pada dataset order item ini terdapat kolom harga dengan statistik sebagai beriku
 
 Tabel 1. Statistik harga order
 
+![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/statistik.png?raw=true)
 |         | price       |
 |-------- |------------ |
 | mean    | 120.653739  |
@@ -150,21 +151,21 @@ Skor review yang ada pada dataset ini adalah dalam rentang 1 sampai dengan 5 dan
 
 Keempat, pada dataset *olist_orders_dataset.csv* (selanjutnya akan dituis dataset orders) memiliki 8 kolom dengan cukup banyak nilai yang hilang pada kolom *order_approved_at*, *order_delivered_carrier_date*, dan *order_delivered_customer_date* karena bisa saja kondisi ketika data ini diambil, terdapat status pembelian yang menyebabkan data pada kolom tersebut masih kosong. Namun untungmya, kolom tersebut tidak terpakai untuk membuat sistem rekomendasi, sehingga akan dihapus. Kemudian, untuk membuat sistem rekomendasi pada proyek ini juga hanya akan menggunakan data dengan status order sudah selesai atau *delivered*.
 
-![image](https://github.com/muhafidz-ahmad/ecommerce-product-recommender-system/assets/115754250/c33dc43f-93d8-403d-9835-cccb972db8f7)
+![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/orderstatus.png?raw=true)
 
-Gambar 3. Jumlah status pesanan
+Gambar 2. Jumlah status pesanan
 
 Kelima, dataset *olist_seller_dataset.csv* (selanjutnya akan ditulis dataset seller) kondisinya sudah sangat bersih. Sama seperti dataset customer, informasi seller juga hanya akan menggunakan informasi kota saja. Terdapat total 3095 penjual yang tersebar di 611 kota.
 
-![image](https://github.com/muhafidz-ahmad/ecommerce-product-recommender-system/assets/115754250/15737acf-b07e-4316-98fe-bf427d56c6dc)
+![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/kotapenjual.png?raw=true)
 
-Gambar 4. Top 10 kota dengan penjual terbanyak
+Gambar 3. Top 10 kota dengan penjual terbanyak
 
 Terakhir, dataset *olist_products_dataset.csv* yang berisi data informasi produk dan *product_category_name_translation.csv* sebagai kamus nama kategori produk dari Bahasa Portugis ke Bahasa Inggris. Sayangnya, dataset produk ini tidak memiliki nama produk dan deskripsi produk yang eksplisit. Sehingga sistem rekomendasi yang akan dibuat akan digunakan *product_id* untuk menunjukan produk tertentu. Terdapat 73 kategori produk pada dataset ini.
 
-![image](https://github.com/muhafidz-ahmad/ecommerce-product-recommender-system/assets/115754250/a4a0da60-3ae4-44a7-a214-bfbd1165dcfe)
+![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/kategoriproduk.png?raw=true)
 
-Gambar 5. Top 10 kategori produk
+Gambar 4. Top 10 kategori produk
 
 ## 4. Data Preparation
 ### 4.1. Content-Based Filtering
@@ -326,8 +327,3 @@ Pada Collaborative Filtering, diperoleh evaluasi RMSE pada data validasi sebesar
 
 ## 8. Suggestion
 Untuk membuat sistem rekomendasi ini lebih baik, dapat digunakan fitur-fitur yang lebih kompleks untuk membuat prediksi rekomendasi. Selain itu, dapat digunakan pula metode sistem rekomendasi yang lebih modern yang dapat membaca berbagai jenis fitur, seperti teks, gambar, hingga video.
-
-## Referensi
-[1] [X. Zhao, "A Study on E-commerce Recommender System Based on Big Data," 2019 IEEE 4th International Conference on Cloud Computing and Big Data Analysis (ICCCBDA), Chengdu, China, 2019, pp. 222-226, doi: 10.1109/ICCCBDA.2019.8725694.](https://ieeexplore.ieee.org/abstract/document/8725694)
-
-[2] [Ruiqi Zheng, Liang Qu, Bin Cui, Yuhui Shi, and Hongzhi Yin. 2023. AutoML for Deep Recommender Systems: A Survey. ACM Trans. Inf. Syst. 41, 4, Article 101 (October 2023), 38 pages. https://doi.org/10.1145/3579355](https://dl.acm.org/doi/abs/10.1145/3579355)
