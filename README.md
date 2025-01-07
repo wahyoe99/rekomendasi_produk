@@ -211,7 +211,7 @@ Kemudian, fitur-fitur yang akan digunakan untuk sistem rekomendasi akan di-encod
 
 Terakhir data dipecah menjadi data *training* dan data *testing* dengan rasio 80%:20%. Fitur prediktor yang digunakan adalah *customer* dan *product*. Fitur targetnya adalah *review_score*.
 
-## 5. Model Development
+## 5. Model dan Result
 Proyek ini menyajikan dua solusi rekomendasi dengan menggunakan algoritma yang berbeda, yaitu *Content-Based Filtering* dan *Collaborative Filtering*.
 
 ### 5.1. Content-Based Filtering
@@ -309,12 +309,10 @@ Dari nilai metrik evaluasi terlihat model memiliki kemampuan rekomendasi yang ba
 
 Namun untuk pendekatan *collaborative filtering*, memang terlihat bahwa produk yang direkomendasikan cukup campur-campur. Karena tujuan dari pendekatan ini tidak hanya mencari produk dengan kategori yang sama, tetapi juga kategori lainnya yang kemungkinan disukai oleh pengguna. Ini menjadi kelebihan pendekatan *collaborative filtering* yang bisa menemukan produk lain yang mungkin sebelumnya kita belum ketahui, tetapi mungkin kita akan menyukainya. Kelemahannya adalah rekomendasi yang diberikan bisa jadi sedikit *random* karena produk yang direkomendasikan adalah berdasarkan tren yang sedang disukai pengguna lain.
 
-## 7. Conclusion
+## 7. Kesimpulan
 Sistem rekomendasi memberikan performa yang baik dengan pendekatan Content-Based Filtering maupun Collaborative Filtering.
 
 Pada Content-Based Filtering, sistem berhasil memberikan nilai evaluasi precision hingga 100% pada contoh 3 pencarian produk yang diuji.
 
 Pada Collaborative Filtering, diperoleh evaluasi RMSE pada data validasi sebesar 0.3353 dan ketika diuji kepada pengguna, produk yang direkomendasikan beragam berdasarkan tren dari pengguna lain yang memiliki historis minat yang sama.
 
-## 8. Suggestion
-Untuk membuat sistem rekomendasi ini lebih baik, dapat digunakan fitur-fitur yang lebih kompleks untuk membuat prediksi rekomendasi. Selain itu, dapat digunakan pula metode sistem rekomendasi yang lebih modern yang dapat membaca berbagai jenis fitur, seperti teks, gambar, hingga video.
