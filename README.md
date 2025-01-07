@@ -136,15 +136,6 @@ Pada dataset order item ini terdapat kolom harga dengan statistik sebagai beriku
 Tabel 1. Statistik harga order
 
 ![image](https://github.com/wahyoe99/rekomendasi_produk/blob/7c3092c401db900d29c07625e5f9366d0f0cf188/statistik.png?raw=true)
-|         | price       |
-|-------- |------------ |
-| mean    | 120.653739  |
-| std     | 183.633928  |
-| min     | 0.850000	   |
-| 25%     | 39.900000	  |
-| 50%     | 74.990000   |
-| 75%     | 134.900000  |
-| max     | 6735.000000	|
 
 Selanjutnya pada dataset *olist_order_reviews_dataset.csv* (selanjutnya akan ditulis dataset order review) memiliki 7 kolom, dua di antaranya adalah *review_comment_title* dan *review_comment_message* yang memiliki banyak nilai yang hilang. Ini karena memang terkadang pembeli ketika memberi review tidak memiliki waktu untuk menulis ulasan yang detail, sehingga hanya memberi skor saja. Oleh karena itu, kedua kolom tersebut dihapus saja. 
 Skor review yang ada pada dataset ini adalah dalam rentang 1 sampai dengan 5 dan rata-rata skor review sebesar 4.09 dari total 99224 review.
